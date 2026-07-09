@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  background: #121212;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: gold;
+  margin-bottom: 40px;
+  font-weight: normal;
+}
+
+button {
+  width: 280px;
+  padding: 18px;
+  margin: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #2e8b57;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+.version {
+  margin-top: 40px;
+  color: #888;
+}.title {
+  color: white;
+  text-align: center;
+}
+
+input {
+  width: 280px;
+  box-sizing: border-box;
+  padding: 17px;
+  margin: 8px;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  background: #242424;
+  color: white;
+  font-size: 18px;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+.secondary {
+  background: #555;
+}.scoreboard {
+  display: flex;
+  gap: 30px;
+  margin: 20px;
+}
+
+.team-card {
+  width: 260px;
+  padding: 25px;
+  text-align: center;
+  background: #222;
+  border: 2px solid gold;
+  border-radius: 18px;
+}
+
+.team-card h3 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.score {
+  margin: 20px;
+  color: gold;
+  font-size: 90px;
+  font-weight: bold;
+}
+
+.team-card button {
+  width: 210px;
+}
+
+@media (max-width: 650px) {
+  .scoreboard {
+    flex-direction: column;
+  }
+}.history {
+  width: min(560px, 90%);
+  margin: 30px 0;
+  padding: 20px;
+  background: #222;
+  border: 2px solid gold;
+  border-radius: 18px;
+}
+
+.history h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.history-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  gap: 12px;
+  padding: 12px 5px;
+  border-bottom: 1px solid #555;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}.bag-row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px 0 18px;
+}
+
+.bag {
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #777;
+  border-radius: 50%;
+  background: #333;
+  color: white;
+  font-size: 28px;
+}
+
+.bag:hover {
+  transform: scale(1.08);
+}
+
+.selected-hole {
+  background: #2e8b57;
+  border-color: #5cff9d;
+}
+
+.selected-board {
+  background: #d4a017;
+  border-color: #ffd700;
+  color: #111;
+}
+
+.player-card p {
+  margin: 12px 0 6px;
+}
