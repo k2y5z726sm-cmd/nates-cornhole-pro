@@ -357,13 +357,33 @@ if (screen === "gameOver") {
 }
 
   return (
-    <div className="app">
-      <h1>🏆 Nate's Cornhole Pro</h1>
-      <h2>Cancellation Scoring</h2>
+  <div className="app game-screen">
+    <header className="game-header">
+      <button
+        className="game-home-button"
+        onClick={() => setScreen("home")}
+      >
+        ←
+      </button>
+
+      <div className="game-brand">
+        <span>NATE'S</span>
+        <strong>CORNHOLE PRO</strong>
+      </div>
+
+      <div className="round-badge">
+        ROUND {roundHistory.length + 1}
+      </div>
+    </header>
+
+    <div className="game-mode-label">
+      CANCELLATION SCORING • RACE TO 21
+    </div>
 
       <div className="scoreboard">
-        <div className="player-card">
-          <h3>{player1}</h3>
+        <div className="player-card player-one-card">
+  <div className="player-label">PLAYER 1</div>
+  <h3>{player1}</h3>
 
           <div className="game-score">{score1}</div>
 
@@ -412,8 +432,9 @@ if (screen === "gameOver") {
 </div>
         </div>
 
-        <div className="player-card">
-          <h3>{player2}</h3>
+        <div className="player-card player-two-card">
+  <div className="player-label">PLAYER 2</div>
+  <h3>{player2}</h3>
 
           <div className="game-score">{score2}</div>
 
