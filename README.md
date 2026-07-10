@@ -1,16 +1,24 @@
-# React + Vite
+# 🏆 Nate's Cornhole Pro
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A professional cornhole scorekeeper built with React.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Quick game setup with custom player names
+- Official cancellation scoring
+- Tap-to-score bag controls
+- Bags in the hole count as 3 points
+- Bags on the board count as 1 point
+- Maximum of 4 bags per player
+- Automatic round scoring
+- First player to 21 wins
+- Round history
+- Undo last round
+- Automatic game saving
+- Restores games after refreshing the browser
 
-## React Compiler
+## Status
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Alpha Version 0.1
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+More features are coming soon.
