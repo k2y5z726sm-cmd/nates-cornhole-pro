@@ -173,10 +173,22 @@ function undoLastRound() {
   }
 }
   function resetGame() {
+  const confirmed = window.confirm(
+    "Start a new game? This will erase the current scores and round history."
+  )
+
+  if (!confirmed) return
+
   setScore1(0)
   setScore2(0)
   setRound1(0)
   setRound2(0)
+
+  setHoleBags1(0)
+  setBoardBags1(0)
+  setHoleBags2(0)
+  setBoardBags2(0)
+
   setRoundHistory([])
   setPreviousScores(null)
   setWinner(null)
