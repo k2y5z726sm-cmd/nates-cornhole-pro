@@ -3,8 +3,8 @@ import "./App.css"
 
 function App() {
   const [screen, setScreen] = useState("home")
-  const [player1, setPlayer1] = useState("Nate")
-  const [player2, setPlayer2] = useState("Danielle")
+  const [player1, setPlayer1] = useState("")
+  const [player2, setPlayer2] = useState("")
 
   const [score1, setScore1] = useState(0)
   const [score2, setScore2] = useState(0)
@@ -93,13 +93,31 @@ useEffect(() => {
   previousScores,
   roundHistory,
 ])
-  function startGame() {
-    setScore1(0)
-    setScore2(0)
-    setRound1(0)
-    setRound2(0)
-    setScreen("game")
+ function startGame() {
+  if (!player1.trim() || !player2.trim()) {
+    alert("Please enter a name for both players or teams.")
+    return
   }
+
+  setPlayer1(player1.trim())
+  setPlayer2(player2.trim())
+
+  setScore1(0)
+  setScore2(0)
+  setRound1(0)
+  setRound2(0)
+
+  setHoleBags1(0)
+  setBoardBags1(0)
+  setHoleBags2(0)
+  setBoardBags2(0)
+
+  setRoundHistory([])
+  setPreviousScores(null)
+  setWinner(null)
+
+  setScreen("game")
+}
 
 function scoreRound() {
   setPreviousScores({
@@ -253,13 +271,13 @@ if (screen === "gameOver") {
         <input
           value={player1}
           onChange={(event) => setPlayer1(event.target.value)}
-          placeholder="Player 1"
+          placeholder="Enter Player/Team 1"
         />
 
         <input
           value={player2}
           onChange={(event) => setPlayer2(event.target.value)}
-          placeholder="Player 2"
+          placeholder="Enter Player/Team 2"
         />
 
         <button onClick={startGame}>🎯 Start Game</button>
