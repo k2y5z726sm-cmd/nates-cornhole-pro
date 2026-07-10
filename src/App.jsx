@@ -213,23 +213,58 @@ function undoLastRound() {
 }
 
   if (screen === "home") {
-    return (
-      <div className="app">
-        <h1>🏆 Nate's Cornhole Pro</h1>
-        <h2>Professional Cornhole Scorekeeper</h2>
+  return (
+    <div className="app home-screen">
+      <div className="brand-logo">
+        <span className="brand-small">NATE'S</span>
+        <span className="brand-main">CORNHOLE</span>
+        <span className="brand-pro">PRO</span>
+      </div>
 
-        <button onClick={() => setScreen("setup")}>
-          🎯 Quick Game
+      <p className="home-tagline">SCORE. TRACK. COMPETE.</p>
+      <p className="home-subtitle">PLAY LIKE A PRO.</p>
+
+      <div className="home-menu">
+        <button
+          className="primary-menu-button"
+          onClick={() => setScreen("setup")}
+        >
+          <span>🎯</span>
+          <div>
+            <strong>QUICK GAME</strong>
+            <small>Start a new cancellation scoring game</small>
+          </div>
         </button>
 
-        <button>🏆 Tournament (Coming Soon)</button>
-        <button>📊 Statistics</button>
-        <button>⚙️ Settings</button>
+        <button className="secondary-menu-button" disabled>
+          <span>🏆</span>
+          <div>
+            <strong>TOURNAMENT</strong>
+            <small>Coming soon</small>
+          </div>
+        </button>
 
-        <p className="version">Alpha Version 0.2</p>
+        <button className="secondary-menu-button" disabled>
+          <span>📊</span>
+          <div>
+            <strong>STATISTICS</strong>
+            <small>Coming soon</small>
+          </div>
+        </button>
+
+        <button className="secondary-menu-button" disabled>
+          <span>⚙️</span>
+          <div>
+            <strong>SETTINGS</strong>
+            <small>Coming soon</small>
+          </div>
+        </button>
       </div>
-    )
-  }
+
+      <p className="version">NATE'S CORNHOLE PRO • VERSION 2.0</p>
+    </div>
+  )
+}
 if (screen === "gameOver") {
   return (
     <div className="app">
@@ -263,31 +298,63 @@ if (screen === "gameOver") {
   )
 }
   if (screen === "setup") {
-    return (
-      <div className="app">
-        <h1>🏆 Nate's Cornhole Pro</h1>
-        <h2>Quick Game Setup</h2>
+  return (
+    <div className="app setup-screen">
+      <button
+        className="setup-back-button"
+        onClick={() => setScreen("home")}
+      >
+        ←
+      </button>
 
-        <input
-          value={player1}
-          onChange={(event) => setPlayer1(event.target.value)}
-          placeholder="Enter Player/Team 1"
-        />
+      <div className="setup-brand">
+        <span>NATE'S</span>
+        <strong>CORNHOLE PRO</strong>
+      </div>
 
-        <input
-          value={player2}
-          onChange={(event) => setPlayer2(event.target.value)}
-          placeholder="Enter Player/Team 2"
-        />
+      <div className="setup-card">
+        <div className="setup-icon">👥</div>
 
-        <button onClick={startGame}>🎯 Start Game</button>
+        <p className="setup-label">NEW GAME</p>
+        <h1>QUICK GAME SETUP</h1>
+        <p className="setup-description">
+          Enter player or team names
+        </p>
 
-        <button className="secondary" onClick={() => setScreen("home")}>
-          ← Back
+        <div className="name-input-group">
+          <span>👤</span>
+          <input
+            type="text"
+            value={player1}
+            onChange={(event) => setPlayer1(event.target.value)}
+            placeholder="Player/Team 1"
+          />
+        </div>
+
+        <div className="name-input-group">
+          <span>👤</span>
+          <input
+            type="text"
+            value={player2}
+            onChange={(event) => setPlayer2(event.target.value)}
+            placeholder="Player/Team 2"
+          />
+        </div>
+
+        <button
+          className="setup-start-button"
+          onClick={startGame}
+        >
+          START GAME
         </button>
       </div>
-    )
-  }
+
+      <p className="setup-footer">
+        CANCELLATION SCORING • RACE TO 21
+      </p>
+    </div>
+  )
+}
 
   return (
     <div className="app">

@@ -312,4 +312,316 @@ h1 {
 
 h2 {
   margin-top: 0;
+}/* ===== NATE'S CORNHOLE PRO 2.0 HOME SCREEN ===== */
+
+.home-screen {
+  min-height: 100vh;
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background:
+    radial-gradient(circle at top, #10243a 0%, #07111c 42%, #03080e 100%);
+}
+
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Impact, "Arial Black", sans-serif;
+  font-style: italic;
+  line-height: 0.82;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.brand-small {
+  color: #e83b3b;
+  font-size: 1.2rem;
+  letter-spacing: 7px;
+  margin-bottom: 10px;
+}
+
+.brand-main {
+  color: #ffffff;
+  font-size: clamp(3.2rem, 10vw, 6rem);
+  letter-spacing: 2px;
+  text-shadow: 4px 5px 0 rgba(0, 0, 0, 0.45);
+}
+
+.brand-pro {
+  color: #e83b3b;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  letter-spacing: 8px;
+  margin-top: 10px;
+}
+
+.home-tagline {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.home-subtitle {
+  color: #2585ff;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 3px;
+  margin: 8px 0 32px;
+}
+
+.home-menu {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.home-menu button {
+  width: 100%;
+  max-width: none;
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 15px 20px;
+  border-radius: 13px;
+  text-align: left;
+}
+
+.home-menu button > span {
+  font-size: 1.7rem;
+}
+
+.home-menu button div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.home-menu strong {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.home-menu small {
+  font-size: 0.76rem;
+  font-weight: 400;
+  opacity: 0.72;
+}
+
+.primary-menu-button {
+  color: white;
+  border: 1px solid #2789ff;
+  background: linear-gradient(135deg, #0863d8, #003c91);
+  box-shadow: 0 10px 30px rgba(0, 91, 210, 0.3);
+}
+
+.secondary-menu-button {
+  color: #d8e2ec;
+  border: 1px solid #263849;
+  background: linear-gradient(145deg, #111d29, #09131d);
+}
+
+.secondary-menu-button:disabled {
+  opacity: 0.58;
+  cursor: not-allowed;
+}
+
+.home-screen .version {
+  color: #607284;
+  margin-top: 35px;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}.home-screen {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.home-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  background-image: url("./assets/cornhole-bg.jpg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.22;
+  filter: grayscale(25%);
+}
+
+.home-screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(3, 8, 14, 0.55),
+      rgba(3, 8, 14, 0.82) 55%,
+      rgba(3, 8, 14, 0.97)
+    );
+}/* ===== NATE'S CORNHOLE PRO 2.0 SETUP SCREEN ===== */
+
+.setup-screen {
+  min-height: 100vh;
+  max-width: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at top, #10243a 0%, #07111c 45%, #03080e 100%);
+}
+
+.setup-back-button {
+  position: absolute;
+  top: 24px;
+  left: 22px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid #263849;
+  border-radius: 50%;
+  color: #ffffff;
+  background: rgba(12, 25, 38, 0.9);
+  font-size: 1.6rem;
+}
+
+.setup-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 28px;
+  font-family: Impact, "Arial Black", sans-serif;
+  font-style: italic;
+  line-height: 1;
+}
+
+.setup-brand span {
+  color: #e83b3b;
+  font-size: 0.75rem;
+  letter-spacing: 5px;
+}
+
+.setup-brand strong {
+  margin-top: 7px;
+  color: #ffffff;
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+}
+
+.setup-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 35px 24px 28px;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #263849;
+  border-radius: 22px;
+  background: linear-gradient(
+    145deg,
+    rgba(17, 29, 41, 0.97),
+    rgba(7, 16, 25, 0.98)
+  );
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.setup-icon {
+  margin-bottom: 15px;
+  font-size: 3.2rem;
+}
+
+.setup-label {
+  margin: 0 0 10px;
+  color: #2585ff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.setup-card h1 {
+  margin: 0;
+  color: #ffffff;
+  font-family: Impact, "Arial Black", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  letter-spacing: 1.5px;
+  text-shadow: none;
+}
+
+.setup-description {
+  margin: 10px 0 28px;
+  color: #8495a5;
+  font-size: 0.9rem;
+}
+
+.name-input-group {
+  width: 100%;
+  min-height: 62px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 15px;
+  padding: 0 17px;
+  box-sizing: border-box;
+  border: 1px solid #2b3d4e;
+  border-radius: 12px;
+  background: #0b1722;
+}
+
+.name-input-group span {
+  font-size: 1.25rem;
+}
+
+.name-input-group input {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.name-input-group input::placeholder {
+  color: #718292;
+}
+
+.setup-start-button {
+  width: 100%;
+  max-width: none;
+  min-height: 60px;
+  margin-top: 12px;
+  border: 1px solid #2789ff;
+  border-radius: 12px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0870ee, #0049a8);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  box-shadow: 0 12px 28px rgba(0, 91, 210, 0.32);
+}
+
+.setup-footer {
+  margin-top: 25px;
+  color: #526577;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
