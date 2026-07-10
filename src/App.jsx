@@ -267,33 +267,52 @@ function undoLastRound() {
 }
 if (screen === "gameOver") {
   return (
-    <div className="app">
-      <h1>🏆 Game Over!</h1>
+    <div className="app game-over-screen">
+      <div className="winner-card">
+        <div className="winner-trophy">🏆</div>
 
-      <h2>{winner?.name} Wins!</h2>
+        <p className="winner-label">GAME COMPLETE</p>
 
-      <div className="game-score">
-        {winner?.winnerScore} - {winner?.loserScore}
+        <h1>VICTORY!</h1>
+
+        <p className="winner-name">
+          {winner?.name}
+        </p>
+
+        <div className="final-score-label">
+          FINAL SCORE
+        </div>
+
+        <div className="final-score">
+          <span>{winner?.winnerScore}</span>
+          <strong>–</strong>
+          <span>{winner?.loserScore}</span>
+        </div>
+
+        <button
+          className="play-again-button"
+          onClick={() => {
+            setWinner(null)
+            startGame()
+          }}
+        >
+          🎯 PLAY AGAIN
+        </button>
+
+        <button
+          className="winner-menu-button"
+          onClick={() => {
+            setWinner(null)
+            setScreen("home")
+          }}
+        >
+          ← MAIN MENU
+        </button>
       </div>
 
-      <button
-        onClick={() => {
-          setWinner(null)
-          startGame()
-        }}
-      >
-        🎯 Play Again
-      </button>
-
-      <button
-        className="secondary"
-        onClick={() => {
-          setWinner(null)
-          setScreen("home")
-        }}
-      >
-        ← Main Menu
-      </button>
+      <p className="winner-footer">
+        NATE'S CORNHOLE PRO • GAME COMPLETE
+      </p>
     </div>
   )
 }
