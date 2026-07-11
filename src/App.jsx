@@ -1,5 +1,15 @@
 import { useEffect, useState } from "react"
 import "./App.css"
+import {
+  FaBullseye,
+  FaTrophy,
+  FaChartBar,
+  FaCog,
+  FaArrowLeft,
+  FaUsers,
+  FaUndo,
+  FaRedo
+} from "react-icons/fa";
 
 function App() {
   const [screen, setScreen] = useState("home")
@@ -227,9 +237,15 @@ function undoLastRound() {
       <div className="home-menu">
         <button
           className="primary-menu-button"
-          onClick={() => setScreen("setup")}
+          onClick={() => {
+  setPlayer1("")
+  setPlayer2("")
+  setScreen("setup")
+}}
         >
-          <span>🎯</span>
+          <span className="menu-icon quick-icon">
+  <FaBullseye />
+</span>
           <div>
             <strong>QUICK GAME</strong>
             <small>Start a new cancellation scoring game</small>
@@ -237,7 +253,9 @@ function undoLastRound() {
         </button>
 
         <button className="secondary-menu-button" disabled>
-          <span>🏆</span>
+          <span className="menu-icon trophy-icon">
+  <FaTrophy />
+</span>
           <div>
             <strong>TOURNAMENT</strong>
             <small>Coming soon</small>
@@ -245,7 +263,9 @@ function undoLastRound() {
         </button>
 
         <button className="secondary-menu-button" disabled>
-          <span>📊</span>
+          <span className="menu-icon chart-icon">
+  <FaChartBar />
+</span>
           <div>
             <strong>STATISTICS</strong>
             <small>Coming soon</small>
@@ -253,11 +273,13 @@ function undoLastRound() {
         </button>
 
         <button className="secondary-menu-button" disabled>
-          <span>⚙️</span>
+          
           <div>
             <strong>SETTINGS</strong>
             <small>Coming soon</small>
-          </div>
+          <span className="menu-icon gear-icon">
+  <FaCog />
+</span></div>
         </button>
       </div>
 

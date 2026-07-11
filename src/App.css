@@ -455,7 +455,7 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
 
-  opacity: 0.22;
+  opacity: 0.30;
   filter: grayscale(25%);
 }
 
@@ -468,9 +468,9 @@ h2 {
   background:
     linear-gradient(
       to bottom,
-      rgba(3, 8, 14, 0.55),
-      rgba(3, 8, 14, 0.82) 55%,
-      rgba(3, 8, 14, 0.97)
+      rgba(3, 8, 14, 0.28),
+      rgba(3, 8, 14, 0.48) 55%,
+      rgba(3, 8, 14, 0.72)
     );
 }/* ===== NATE'S CORNHOLE PRO 2.0 SETUP SCREEN ===== */
 
@@ -1193,4 +1193,33 @@ h2 {
   margin-bottom: 12px;
 }.winner-name {
   margin-top: 20px;
+}/* ===== PROFESSIONAL MENU ICONS ===== */
+
+.menu-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.4rem;
+
+  flex-shrink: 0;
+}
+
+.quick-icon {
+  color: #3aa0ff;
+}
+
+.trophy-icon {
+  color: #f6c343;
+}
+
+.chart-icon {
+  color: #37c871;
+}
+
+.gear-icon {
+  color: #9ca7b3;
 }
