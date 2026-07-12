@@ -1222,4 +1222,9 @@ h2 {
 
 .gear-icon {
   color: #9ca7b3;
-}
+}.winner-menu-button svg {
+    margin-right: 08px;
+}.winner-trophy svg {
+    font-size: 3.5rem;
+    color: #f4b400;
+} 

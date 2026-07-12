@@ -8,7 +8,10 @@ import {
   FaArrowLeft,
   FaUsers,
   FaUndo,
-  FaRedo
+  FaRedo,
+  FaClipboardList,
+  FaCheckCircle,
+  FaHome
 } from "react-icons/fa";
 
 function App() {
@@ -291,11 +294,14 @@ if (screen === "gameOver") {
   return (
     <div className="app game-over-screen">
       <div className="winner-card">
-        <div className="winner-trophy">🏆</div>
 
-        <p className="winner-label">GAME COMPLETE</p>
+    <div className="winner-trophy">
+        <FaTrophy />
+    </div>
 
-        <h1>VICTORY!</h1>
+    <p className="winner-label">GAME COMPLETE</p>
+
+    <h1>VICTORY!</h1>
 
         <p className="winner-name">
           {winner?.name}
@@ -318,7 +324,9 @@ if (screen === "gameOver") {
             startGame()
           }}
         >
-          🎯 PLAY AGAIN
+          
+  <span>PLAY AGAIN</span>
+
         </button>
 
         <button
@@ -328,7 +336,8 @@ if (screen === "gameOver") {
             setScreen("home")
           }}
         >
-          ← MAIN MENU
+          <FaHome />
+<span>MAIN MENU</span>
         </button>
       </div>
 
@@ -354,7 +363,9 @@ if (screen === "gameOver") {
       </div>
 
       <div className="setup-card">
-        <div className="setup-icon">👥</div>
+        <div className="setup-icon">
+  <FaUsers />
+</div>
 
         <p className="setup-label">NEW GAME</p>
         <h1>QUICK GAME SETUP</h1>
@@ -527,21 +538,30 @@ if (screen === "gameOver") {
       </div>
 
       <button className="score-round" onClick={scoreRound}>
-        ✅ Score Round
+        <>
+  <FaCheckCircle />
+  <span>Score Round</span>
+</>
       </button>
 <button
   className="secondary"
   onClick={undoLastRound}
   disabled={!previousScores}
 >
-  ↶ Undo Last Round
+  <>
+  <FaUndo />
+  <span>Undo Last Round</span>
+</>
 </button>
       <button className="secondary" onClick={resetGame}>
-        ↻ Reset Game
+        <>
+  <FaRedo />
+  <span>Reset Game</span>
+</>
       </button>
 
 <div className="history">
-  <h2>📋 Round History</h2>
+  <FaClipboardList /><h2>📋 Round History</h2>
 
   {roundHistory.length === 0 ? (
     <p>No rounds scored yet.</p>
